@@ -1,0 +1,80 @@
+.stackContainer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+    border-radius: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab.active {
+    background: #F16529; /* Highlight active tab */
+    color: #fff;
+}
+
+.tab:hover {
+    background: #F16529; /* Hover effect for tabs */
+    color: #fff;
+}
+
+.tabContent {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.specs {
+    text-align: left;
+}
+
+.specsHeader {
+    color: #F16529;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #F16529; /* Underline to make it more prominent */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.specsContent {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.specsList {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.specsList li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Set text color to contrast with the dark background */
+}
+
+.specIcon {
+    font-size: 20px;
+    margin-right: 10px; /* Add space between the icon and text */
+    color: #F16529; /* Set the icon color for better contrast */
+}
+
+.specsList strong {
+    color: #F16529; /* Set strong text color to make it pop */
+    margin-right: 5px;
+}
