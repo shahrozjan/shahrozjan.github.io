@@ -83,3 +83,28 @@
     font-weight: bold;
     margin-bottom: 15px; /* Adds space between text and animation */
 }
+
+
+.closeButton {
+    background: transparent;
+    border: whitesmoke;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    color: #ffffff; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Align text with icon */
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+}
+
+.closeButton:hover {
+    color: #f16529; /* Hover effect color */
+}
+
+.closeButton svg {
+    margin-right: 6px; /* Space between the icon and text */
+}

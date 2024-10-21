@@ -1,52 +1,123 @@
+/* Main Container for Experience Component */
 .experienceContainer {
+    height: 100vh; /* Full viewport height */
+    max-height: 100vh; /* Prevent container overflow */
+    overflow-y: scroll; /* Enable vertical scrolling */
     padding: 20px;
-    margin: 20px 0; /* Adds some space between experience entries */
-    background: rgba(255, 255, 255, 0.1); /* Subtle background */
+    background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
     border-radius: 10px;
-    color: #fff; /* To ensure the text is readable */
-    overflow: auto; /* Allow scrolling if content overflows */
+    scrollbar-width: thin; /* Thinner scrollbar for Firefox */
+    scrollbar-color: #888 #111; /* Scrollbar color for Firefox */
 }
 
-/* Company logo and description styling */
-.companyLogo {
-    height: 50px;
-    width: 50px;
-    margin-right: 15px;
+/* Webkit scroll bar customization */
+.experienceContainer::-webkit-scrollbar {
+    width: 8px;
 }
 
-.companyHeader {
+.experienceContainer::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.experienceContainer::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+    border: 2px solid #111; /* Adds spacing inside the scrollbar handle */
+}
+
+/* Experience Item Styles */
+.experienceItem {
     display: flex;
-    align-items: center;
-    font-size: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Prevent child elements from overflowing */
+}
+
+/* Company Logo Styles */
+.companyLogo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px; /* Rounded corners for logos */
+    object-fit: contain;
+}
+
+/* Experience Content Styles */
+.experienceContent {
+    text-align: left;
+    flex: 1; /* Ensures content takes the available width */
+}
+
+.companyName {
+    font-size: 24px;
     font-weight: bold;
-    color: #F16529; /* Company name color */
-    margin-bottom: 5px;
+    color: #F16529;
+    margin: 0;
 }
 
 .companyIntro {
-    font-size: 16px;
-    color: #aaa; /* Subtitle color */
-    margin-bottom: 10px;
+    color: #ccc;
+    font-style: italic;
+    margin: 5px 0 10px;
 }
 
 .jobTitle {
+    font-size: 18px;
     font-weight: bold;
-    color: #F16529;
     margin: 10px 0 5px;
+    color: #F16529;
 }
 
 .jobDates {
-    font-size: 14px;
-    color: #ddd;
-    margin-left: 10px;
+    font-weight: normal;
+    color: #888;
+    font-size: 16px;
 }
 
 .jobDescription {
     list-style-type: disc;
-    margin-left: 30px;
-    color: #fff;
+    padding-left: 20px;
+    color: #ffffff;
+    margin: 5px 0;
 }
 
 .jobDescription li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.tondone {
+    color: #3b7edc;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.resideo {
+    color: #e54659be !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.closeButton {
+    background: transparent;
+    border: whitesmoke;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    color: #ffffff; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Align text with icon */
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+}
+
+.closeButton:hover {
+    color: #f16529; /* Hover effect color */
+}
+
+.closeButton svg {
+    margin-right: 6px; /* Space between the icon and text */
 }

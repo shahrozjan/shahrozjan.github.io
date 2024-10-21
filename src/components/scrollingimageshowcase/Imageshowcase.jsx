@@ -98,6 +98,8 @@ const ImageShowCase = () => {
         }, 500);
     };
 
+    
+
     return (
         <>
             <div className={styles.parent} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}
@@ -114,13 +116,12 @@ const ImageShowCase = () => {
                 <div className={styles.expandedsection} ref={expandedsection}>
                     <img className={styles.bgimg} src={focusedURL} ref={focusedimage} alt='Background Image' />
                     <div className={styles.expandedcontainer}>
-                        <button className={styles.closeButton} onClick={handlesectionexit}>×</button>
                         {focusedSection === 'Stack' && (
-                            <Stack />
+                            <Stack exitfn={handlesectionexit}/>
                         )}
                         {focusedSection === 'Experience' && (
                             <>
-                            <Experience />
+                            <Experience exitfn={handlesectionexit}/>
                             </>
                         )}
                         {focusedSection === 'Projects' && (

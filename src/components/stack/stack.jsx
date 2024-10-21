@@ -1,10 +1,16 @@
 import React from 'react';
 import StackAnimation from './stack-animation.jsx'; // Import your animation component
 import styles from './stack.module.css'; // Use lowercase for the CSS import
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
-export default function Stack() {
+export default function Stack(props) {
     return (
+        
         <div className={styles.stackContainer}>
+            <button className={styles.closeButton} onClick={props.exitfn}>
+            <FontAwesomeIcon icon={faChevronLeft} /> Back
+            </button>
             {/* Technical Specifications Section */}
             <div className={styles.specs}>
                 <h2 className={styles.specsHeader}>Stack Specifications</h2>
