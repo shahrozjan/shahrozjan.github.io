@@ -1,57 +1,47 @@
+/* Main Container for Stack Component */
 .stackContainer {
-    padding: 20px;
+    height: 100vh; /* Set the container height to fill the viewport */
+    overflow-y: auto; /* Enable vertical scrolling for the whole container */
+    padding: 10px; /* Reduced padding for a more compact look */
     background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
     border-radius: 10px;
+    scrollbar-width: thin; /* Thinner scrollbar for Firefox */
+    scrollbar-color: #888 #111; /* Scrollbar color for Firefox */
 }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* Webkit scroll bar customization */
+.stackContainer::-webkit-scrollbar {
+    width: 8px;
 }
 
-.tab {
-    background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: 0.3s;
+.stackContainer::-webkit-scrollbar-track {
+    background: #111;
 }
 
-.tab.active {
-    background: #F16529; /* Highlight active tab */
-    color: #fff;
-}
-
-.tab:hover {
-    background: #F16529; /* Hover effect for tabs */
-    color: #fff;
-}
-
-.tabContent {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+.stackContainer::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
     border-radius: 10px;
+    border: 2px solid #111; /* Adds spacing inside the scrollbar handle */
 }
 
+/* Technical Specifications Styles */
 .specs {
     text-align: left;
+    margin-bottom: 0px; /* Further reduced space between the specs and animation sections */
 }
 
 .specsHeader {
     color: #F16529;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin for a more compact look */
     border-bottom: 2px solid #F16529; /* Underline to make it more prominent */
     display: inline-block;
     padding-bottom: 5px;
 }
 
 .specsContent {
-    padding: 20px;
+    padding: 15px; /* Reduced padding for compactness */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
@@ -62,7 +52,7 @@
 }
 
 .specsList li {
-    margin: 15px 0;
+    margin: 8px 0; /* Decreased margin for more compact display */
     display: flex;
     align-items: center;
     color: #ffffff; /* Set text color to contrast with the dark background */
@@ -77,4 +67,19 @@
 .specsList strong {
     color: #F16529; /* Set strong text color to make it pop */
     margin-right: 5px;
+}
+
+/* Animation Section Styles */
+.animation {
+    text-align: center;
+    margin-top: 0px; /* Further reduced margin above the animation */
+}
+
+/* Animation Text Styles */
+.animationText {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Adds space between text and animation */
 }

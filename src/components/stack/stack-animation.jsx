@@ -9,15 +9,9 @@ import imagesix from "../../images/stack/python-logo.png";
 
 const StackAnimation = () => {
     const imagebg = useRef();
-    const changetxt = useRef();
-    const changetext = [['HTML5'], ['JavaScript'], ['Reactjs'], ['Dotnet'], ['C#'], ['Python']];
     const images = [imageone, imagetwo, imagethree, imagefour, imagefive, imagesix];
     const colors = ['#264653', '#a59636', '#73a4ac', '#e0e0e0', '#eccaff', '#00509d'];
-    const textcolor = ['#F16529', '#F8E018', '#9ee1ec', '#ffffff', '#a663cc', '#ffffff'];
-
     const [image, setimage] = useState(imageone);
-    const [textone, settextone] = useState(changetext[0][0]);
-    const [currentTextColor, setCurrentTextColor] = useState(textcolor[0]); // Track the current text color
     const [fade, setfade] = useState(false);
 
     useEffect(() => {
@@ -38,13 +32,11 @@ const StackAnimation = () => {
             setfade(true);
         }, 4000);
 
-        // Update image, text, and background
+        // Update image, and background
         timeoutUpdate = setTimeout(() => {
             const nextIndex = (currentimageindex === finalindex) ? 0 : currentimageindex + 1;
 
             setimage(images[nextIndex]);
-            settextone(changetext[nextIndex][0]);
-            setCurrentTextColor(textcolor[nextIndex]); // Update text color state
 
             if (imagebg.current) {
                 imagebg.current.style.backgroundColor = colors[nextIndex];
@@ -67,16 +59,6 @@ const StackAnimation = () => {
         <>
             <div className={styles.homesearchparent}>
                 <div className={styles.homesearch_main}>
-                    <div className={styles.homesearchinputcontainter}>
-                        <div ref={changetxt} className={styles.changetext}>
-                            <p
-                                className={`${styles.innertext} ${fade ? styles.fadedownup : ''}`}
-                                style={{ color: currentTextColor }} // Use inline style for color
-                            >
-                                {textone}
-                            </p>
-                        </div>
-                    </div>
                     <div className={styles.bannerimage_holder}>
                         <img
                             className={`${styles.bannerimage} ${fade ? styles.fadedownup : ''}`}

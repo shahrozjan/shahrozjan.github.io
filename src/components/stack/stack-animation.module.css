@@ -16,25 +16,16 @@
     height: auto;
     position: relative;
     z-index: 1; /* Ensures this is above other elements */
-}
-
-.homesearchinputcontainter {
-    position: absolute; /* Fix the position of the text */
-    left: -300px; /* Set a consistent distance from the animation */
-    top: 50%;
-    transform: translateY(-50%); /* Vertically center the text */
     display: flex;
-    justify-content: flex-end; /* Align text content to the end */
-    align-items: center;
-    z-index: 3; /* Ensure text is above the image */
-    background: transparent; /* Ensure no white background here */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align image */
 }
 
 .bannerimage_holder {
     width: 300px;
-    height: 300px;
+    height: 400px; /* Increased height to fit image */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center align image */
     align-items: center;
     position: relative;
     z-index: 4; /* Ensure this is above the background */
@@ -57,24 +48,6 @@
     transition: 1s;
     background-color: #264653; /* Make the background circle partially transparent */
     z-index: 1; /* Background layer below everything else */
-}
-
-.changetext {
-    width: auto;
-    transition: 1s;
-    text-align: right;
-     color: #F16529; /*Ensure color is different from the background for visibility */
-    z-index: 6; /* Text appears on top */
-    position: relative; /* Keep text positioned within its container */
-    margin-right: 0; /* Remove extra margin that pushes the text away */
-}
-
-.innertext {
-    font-size: 40px;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.1;
-     color: #F16529; /*Set explicit color to make it visible */
 }
 
 /* Animation Adjustments */
@@ -115,25 +88,14 @@
         height: auto;
         flex-direction: column; /* Switch to vertical stacking on smaller screens */
     }
-    .homesearchinputcontainter {
-        position: static; /* Remove absolute positioning for small screens */
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        justify-content: center; /* Center-align the text on smaller screens */
-    }
     .bannerimage_holder {
         width: 300px;
-        height: 300px;
+        height: auto;
         margin-top: 20px;
     }
     .image_background {
         width: 400px;
         height: 400px;
-    }
-    .changetext {
-        position: static;
-        margin-bottom: 20px;
     }
 }
 
@@ -141,19 +103,13 @@
     .homesearch_main {
         width: 100%;
     }
-    .homesearchinputcontainter {
-        margin-top: 20px;
-    }
     .bannerimage_holder {
         width: 250px;
-        height: 250px;
+        height: auto;
         margin-top: 20px;
     }
     .image_background {
         width: 300px;
         height: 300px;
-    }
-    .changetext {
-        top: -50px;
     }
 }
