@@ -1,0 +1,61 @@
+/* Main Styles for TagFilter */
+
+.checky {
+    color: whitesmoke; /* General text color for dropdown */
+}
+
+/* Styling for Each Option in Dropdown */
+.autocompleteOption {
+    background-color: #333333; /* Set the background color of each option */
+    color: whitesmoke; /* Set the text color of each option */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the Paper Component (Dropdown Container) */
+.paperComponent {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+/* Styling for the Checkbox */
+.checkbox {
+    color: whitesmoke !important; /* Ensure checkbox color contrasts well */
+    margin-right: 8px;
+}
+
+/* Styling for Selected Chips */
+.chip {
+    background-color: #f16529 !important; /* A contrasting background color */
+    color: whitesmoke !important; /* Text color */
+    font-weight: bold !important;
+}
+
+/* Styling for the Input Field */
+.textField {
+    background-color: #333333;
+    border-radius: 30px;
+}
+
+/* Label and Input Field Styling */
+.textField .MuiInputLabel-root {
+    color: whitesmoke; /* Label text color */
+}
+
+.textField .MuiOutlinedInput-root fieldset {
+    border-radius: 30px;
+    border-color: whitesmoke; /* Input field border color */
+}
+
+.textField .MuiOutlinedInput-root:hover fieldset {
+    border-color: #F16529 !important; /* Input field border color on hover */
+}
+
+.textField .MuiOutlinedInput-root input {
+    color: whitesmoke; /* Input text color */
+}
+
+/* Styling for "No Options" message in dropdown */
+.MuiAutocomplete-noOptions {
+    color: whitesmoke !important;
+}
