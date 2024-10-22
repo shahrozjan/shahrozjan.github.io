@@ -3,7 +3,14 @@ import styles from './project.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import projectsData from "./projectsData.json";
+import { Autocomplete, TextField, Checkbox, Paper } from "@mui/material";
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
+const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+const checkedIcon = <CheckBoxIcon fontSize="small" />;
+const top100Films = [
+    { title: 'The Shawshank Redemption', year: 1994 }]
 const Projects = (props) => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [closeBtnClassname, setCloseBtnClassname] = useState(styles.closeButton);
@@ -74,6 +81,88 @@ const Projects = (props) => {
                     <button className={styles.closeButton} onClick={props.exitfn}>
                         <FontAwesomeIcon icon={faChevronLeft} /> Back
                     </button>
+                    <Autocomplete
+      multiple
+      className={styles.checky}
+      id="checkboxes-tags-demo"
+      options={top100Films}
+      disableCloseOnSelect
+      getOptionLabel={(option) => option.title}
+      renderOption={(props, option, { selected }) => {
+        const { key, ...optionProps } = props;
+        return (
+          <li
+            key={key}
+            {...optionProps}
+            style={{
+              backgroundColor: "#333333", // Set the background color of each option
+              color: "whitesmoke", // Set the text color of each option
+            }}
+          >
+            <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ color: "whitesmoke", marginRight: 8 }}
+              checked={selected}
+            />
+            {option.title}
+          </li>
+        );
+      }}
+      PaperComponent={({ children }) => (
+        <Paper style={{ backgroundColor: "#222", color: "whitesmoke" }}>
+          {children}
+          <style>
+            {`
+              .MuiAutocomplete-noOptions {
+                color: whitesmoke !important;
+              }
+            `}
+          </style>
+        </Paper>
+      )}
+      ChipProps={{
+        sx: {
+          backgroundColor: "#f16529", // A contrasting background color
+          color: "whitesmoke", // Text color
+          fontWeight: "bold",
+        },
+      }}
+      sx={{
+        width: 500,
+        "& .MuiInputLabel-root": {
+          color: "whitesmoke", // Label text color
+        },
+        "& .MuiOutlinedInput-root": {
+          "& fieldset": {
+            borderRadius: 30,
+            borderColor: "whitesmoke", // Input field border color
+          },
+          "&:hover fieldset": {
+            borderRadius: 30,
+            borderColor: "#F16529", // Input field border color on hover
+          },
+          "& input": {
+            color: "whitesmoke", // Input text color
+          },
+          
+        },
+      }}
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          label="Checkboxes"
+          placeholder="Favorites"
+          sx={{
+            backgroundColor: "#333333",
+            borderRadius: 30,
+            "& .MuiInputBase-input": {
+              color: "whitesmoke", // Input text color
+            },
+          }}
+        />
+      )}
+    />
                     <div className={styles.parent}>
                         {projectsData.map((project, index) => (
                             <div
