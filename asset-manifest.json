@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9ae8a4f9.css",
-    "main.js": "/static/js/main.5266dbff.js",
+    "main.css": "/static/css/main.9c07258e.css",
+    "main.js": "/static/js/main.c0dfd0c4.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/about.jpg": "/static/media/about.87a372101f2834bf5756.jpg",
     "static/media/services.jpg": "/static/media/services.31cae5a516f339e0c122.jpg",
@@ -12,16 +12,18 @@
     "static/media/projects.jpg": "/static/media/projects.7d2c0c13c0cdaf2d8d7a.jpg",
     "static/media/react.1024x911.png": "/static/media/react.1024x911.d33541a41b630d5b3a54.png",
     "static/media/net-logo.png": "/static/media/net-logo.502c87a45099d6c842d5.png",
+    "static/media/bplus_trees.jpg": "/static/media/bplus_trees.6716beefd2af9d576e22.jpg",
     "static/media/javascript-js.1024x1024.png": "/static/media/javascript-js.1024x1024.66c9eab7b39dc7b94970.png",
-    "static/media/tondone.png": "/static/media/tondone.ef6d2c3b5aaa1508760d.png",
+    "static/media/tondone.png": "/static/media/tondone.135ae18ac9ce66971f19.png",
     "static/media/resideo.png": "/static/media/resideo.5b2496b3c914ff211129.png",
+    "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
     "index.html": "/index.html",
-    "main.9ae8a4f9.css.map": "/static/css/main.9ae8a4f9.css.map",
-    "main.5266dbff.js.map": "/static/js/main.5266dbff.js.map",
+    "main.9c07258e.css.map": "/static/css/main.9c07258e.css.map",
+    "main.c0dfd0c4.js.map": "/static/js/main.c0dfd0c4.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ae8a4f9.css",
-    "static/js/main.5266dbff.js"
+    "static/css/main.9c07258e.css",
+    "static/js/main.c0dfd0c4.js"
   ]
 }
