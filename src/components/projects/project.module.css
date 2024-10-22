@@ -2,13 +2,12 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-    grid-template-rows: repeat(auto-fill, minmax(300px, 300px));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
     margin-top: 75px;
-    padding: 20px 0;
-    overflow: scroll;
+    padding: 20px 20px;
+    overflow-y: scroll;
     scrollbar-width: none;
 }
 
@@ -20,10 +19,11 @@
     opacity: 0;
     position: relative;
     top: -30px;
-    height: 300px;
+    height: 350px; /* Set the height of each project box */
     width: 100%;
     text-decoration: none;
     color: #e9e9e9;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
@@ -31,18 +31,94 @@
     background-color: rgb(61, 61, 61);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: .5s ease-in-out;
+    cursor: pointer;
 }
 
-.project:last-child {
-    margin-bottom: 120px;
+.projectThumbnail {
+    width: 100%;
+    height: 200px; /* Control the height of the image */
+    object-fit: cover; /* Make sure the image covers the area without distorting */
+    border-bottom: 2px solid #f16529; /* Optional: Add a border below the image */
+}
+
+.project h3 {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
 }
 
 .project:hover {
     transform: scale(1.05);
 }
 
-@media (max-width:450px) {
-    .parent {
-        grid-template-columns: repeat(auto-fill, minmax(90%, 90%));
-    }
+.projectDetails {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+.projectContent {
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.projectImage {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #f16529;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.closeButton {
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.closeButton:hover {
+    color: #f16529;
+}
+
+.closeButton svg {
+    margin-right: 6px;
 }

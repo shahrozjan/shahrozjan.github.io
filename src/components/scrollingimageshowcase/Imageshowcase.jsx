@@ -125,7 +125,7 @@ const ImageShowCase = () => {
                             </>
                         )}
                         {focusedSection === 'Projects' && (
-                            <Projects />
+                            <Projects exitfn={handlesectionexit}/>
                         )}
                         {focusedSection === 'About Me' && (
                             <>
