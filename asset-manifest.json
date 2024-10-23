@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.c27c5109.css",
-    "main.js": "/static/js/main.4610dd76.js",
+    "main.css": "/static/css/main.e03757e4.css",
+    "main.js": "/static/js/main.085452bd.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/media/yourBackgroundImage11.jpg": "/static/media/yourBackgroundImage11.33cd41d0e7b20860b1cb.jpg",
     "static/media/about.jpg": "/static/media/about.87a372101f2834bf5756.jpg",
     "static/media/services.jpg": "/static/media/services.31cae5a516f339e0c122.jpg",
     "static/media/stack.jpg": "/static/media/stack.fbd6b74b719e38edeed9.jpg",
@@ -15,15 +16,17 @@
     "static/media/bplus_trees.jpg": "/static/media/bplus_trees.6716beefd2af9d576e22.jpg",
     "static/media/javascript-js.1024x1024.png": "/static/media/javascript-js.1024x1024.66c9eab7b39dc7b94970.png",
     "static/media/tondone.png": "/static/media/tondone.135ae18ac9ce66971f19.png",
+    "static/media/english.svg": "/static/media/english.2aed9033ca7a80bae407f3a5ee3b12a6.svg",
     "static/media/resideo.png": "/static/media/resideo.5b2496b3c914ff211129.png",
     "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
+    "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
-    "main.c27c5109.css.map": "/static/css/main.c27c5109.css.map",
-    "main.4610dd76.js.map": "/static/js/main.4610dd76.js.map",
+    "main.e03757e4.css.map": "/static/css/main.e03757e4.css.map",
+    "main.085452bd.js.map": "/static/js/main.085452bd.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c27c5109.css",
-    "static/js/main.4610dd76.js"
+    "static/css/main.e03757e4.css",
+    "static/js/main.085452bd.js"
   ]
 }
