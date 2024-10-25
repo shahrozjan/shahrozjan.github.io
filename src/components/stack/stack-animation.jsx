@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./stack-animation.module.css";
-import imageone from "../../images/stack/file-type-html.902x1024.png";
+import imageone from "../../images/stack/react.1024x911.png";
 import imagetwo from "../../images/stack/javascript-js.1024x1024.png";
-import imagethree from "../../images/stack/react.1024x911.png";
+import imagethree from "../../images/stack/file-type-html.902x1024.png";
 import imagefour from "../../images/stack/net-logo.png";
 import imagefive from "../../images/stack/c-sharp-logo.png";
 import imagesix from "../../images/stack/python-logo.png";
@@ -10,7 +10,7 @@ import imagesix from "../../images/stack/python-logo.png";
 const StackAnimation = () => {
     const imagebg = useRef();
     const images = [imageone, imagetwo, imagethree, imagefour, imagefive, imagesix];
-    const colors = ['#264653', '#a59636', '#73a4ac', '#e0e0e0', '#eccaff', '#00509d'];
+    const colors = ['#73a4ac', '#a59636', '#264653', '#e0e0e0', '#eccaff', '#00509d'];
     const [image, setimage] = useState(imageone);
     const [fade, setfade] = useState(false);
 
@@ -18,7 +18,7 @@ const StackAnimation = () => {
         const parent = document.querySelector(`.${styles.homesearchparent}`);
         setTimeout(() => {
             parent.style.opacity = '1';
-        }, 500);
+        }, 100);
     }, []);
 
     useEffect(() => {
@@ -30,9 +30,9 @@ const StackAnimation = () => {
         // Trigger fade-out effect
         timeoutFadeIn = setTimeout(() => {
             setfade(true);
-        }, 4000);
+        }, 3000);
 
-        // Update image, and background
+        // Update image and background
         timeoutUpdate = setTimeout(() => {
             const nextIndex = (currentimageindex === finalindex) ? 0 : currentimageindex + 1;
 
@@ -41,12 +41,12 @@ const StackAnimation = () => {
             if (imagebg.current) {
                 imagebg.current.style.backgroundColor = colors[nextIndex];
             }
-        }, 5000);
+        }, 3000);
 
         // Trigger fade-in effect
         timeoutFadeOut = setTimeout(() => {
             setfade(false);
-        }, 6000);
+        }, 3000);
 
         return () => {
             clearTimeout(timeoutFadeIn);

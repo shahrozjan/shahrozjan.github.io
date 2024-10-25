@@ -1,10 +1,10 @@
-import React from 'react';
-import { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './Imageshowcase.module.css';
 import Projects from '../projects/projects';
 import Stack from '../stack/stack';
 import Experience from '../experience/experience';
 import About from '../about/about';
+import dragImage from './images/Dragger.png'; // Import your drag image
 
 const ImageShowCase = () => {
     const [focusedSection, setFocusedSection] = useState(null);
@@ -13,6 +13,7 @@ const ImageShowCase = () => {
     const [dataPrevPercentage, setDataPrevPercentage] = useState(0);
     const [dataPercentage, setDataPercentage] = useState(0);
     const [allowClick, setAllowClick] = useState(true);
+    const [showDragImage, setShowDragImage] = useState(true); // State to control the visibility of the drag image
 
     const imagearray = [
         {
@@ -21,7 +22,7 @@ const ImageShowCase = () => {
         },
         {
             'section name': 'Projects',
-            'url': require('../../images/yourBackgroundImage6.jpg'),
+            'url': require('../../images/yourBackgroundImage10.jpg'),
         },
         {
             'section name': 'Experience',
@@ -36,6 +37,23 @@ const ImageShowCase = () => {
     const track = useRef();
     const focusedimage = useRef();
     const expandedsection = useRef();
+
+    useEffect(() => {
+        // Hide the drag image after 3 seconds
+        const timer = setTimeout(() => {
+            setShowDragImage(false);
+        }, 3000);
+
+        // Hide the drag image on any click event
+        const handleClick = () => setShowDragImage(false);
+        window.addEventListener('click', handleClick);
+
+        // Cleanup event listener and timer on component unmount
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('click', handleClick);
+        };
+    }, []);
 
     const handleMouseDown = (e) => {
         if (focusedURL) return;
@@ -55,7 +73,7 @@ const ImageShowCase = () => {
 
         const images = [...document.querySelectorAll(`.${styles.image}`)];
 
-        images.map((image, index) => {
+        images.forEach((image) => {
             image.animate({
                 objectPosition: `${nextPercentage + 100}% 50%`,
             }, { duration: 1200, fill: "forwards" });
@@ -99,10 +117,13 @@ const ImageShowCase = () => {
         }, 500);
     };
 
-    
-
     return (
         <>
+            {showDragImage && (
+                <div className={styles.dragImageContainer}>
+                    <img src={dragImage} alt="Drag Image" className={styles.dragImage} />
+                </div>
+            )}
             <div className={styles.parent} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}
                 onTouchStart={handleMouseDown} onTouchMove={handleMouseMove} onTouchEnd={handleMouseUp}>
                 <div className={`${styles.track}`} ref={track}>
@@ -122,7 +143,7 @@ const ImageShowCase = () => {
                         )}
                         {focusedSection === 'Experience' && (
                             <>
-                            <Experience exitfn={handlesectionexit}/>
+                                <Experience exitfn={handlesectionexit}/>
                             </>
                         )}
                         {focusedSection === 'Projects' && (
@@ -130,7 +151,7 @@ const ImageShowCase = () => {
                         )}
                         {focusedSection === 'About Me' && (
                             <>
-                            <About exitfn={handlesectionexit}/>
+                                <About exitfn={handlesectionexit}/>
                             </>
                         )}
                     </div>

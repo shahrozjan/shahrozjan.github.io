@@ -7,7 +7,7 @@
     overflow: hidden;
     position: relative;
     overflow-y: auto; /*Allow vertical scrolling if needed */
-    background-image: url('./images/yourBackgroundImage11.jpg');
+    background-image: url('./images/yourBackgroundImage6.jpg');
     background-size: cover; /* Make sure the background covers the entire container */
     background-position: center; /* Center the image within the container */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -109,4 +109,17 @@
     overflow-y: auto;
     top: 0;
     left: 0;
+}
+
+.dragImageContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensures the image appears above everything else */
+}
+
+.dragImage {
+    width: 100%; /* Adjust the size as needed */
+    height: auto;
 }

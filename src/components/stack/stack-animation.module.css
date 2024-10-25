@@ -10,6 +10,8 @@
     opacity: 0; /* Initially hidden, controlled by useEffect */
     transition: 0.5s;
     max-width: 100%;
+    margin: 0; /* Set margin to 0 to eliminate unwanted spacing */
+    padding: 0; /* Set padding to 0 */
 }
 
 .homesearch_main {
@@ -20,7 +22,10 @@
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center align image */
+    margin: 0; /* Set margin to 0 */
+    padding: 0; /* Set padding to 0 */
 }
+
 
 .bannerimage_holder {
     width: 300px;
@@ -92,7 +97,7 @@
     .bannerimage_holder {
         width: 300px;
         height: auto;
-        margin-top: 20px;
+        margin-top: 0px;
     }
     .image_background {
         width: 400px;
@@ -107,7 +112,7 @@
     .bannerimage_holder {
         width: 250px;
         height: auto;
-        margin-top: 20px;
+        margin-top: 0px;
     }
     .image_background {
         width: 300px;
