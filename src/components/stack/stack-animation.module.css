@@ -9,6 +9,7 @@
     background: transparent; /* Ensure the parent background is transparent */
     opacity: 0; /* Initially hidden, controlled by useEffect */
     transition: 0.5s;
+    max-width: 100%;
 }
 
 .homesearch_main {

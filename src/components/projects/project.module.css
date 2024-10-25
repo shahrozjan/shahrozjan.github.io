@@ -1,14 +1,18 @@
 .parent {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    margin-top: 75px;
-    padding: 20px 20px;
-    overflow-y: scroll;
+    width: 100vw;
+    height: auto; /* Allow the container to adjust its height */
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    margin: 0;
+    overflow-y: auto; /* Allow scrolling */
+    padding-top: 20px;
+    display: flex; /* Flex display for centering */
+    flex-wrap: wrap; /* Wrap elements within the container */
+    gap: 20px; /* Gap between cards */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align cards to the top */
     scrollbar-width: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .parent::-webkit-scrollbar {
@@ -20,7 +24,7 @@
     position: relative;
     top: -30px;
     height: 350px; /* Set the height of each project box */
-    width: 100%;
+    width: 250px; /* Fixed width to maintain consistency */
     text-decoration: none;
     color: #e9e9e9;
     display: flex;
@@ -55,7 +59,8 @@
 
 .projectDetails {
     width: 100%;
-    height: 100%;
+    height: 100%; /* This should be 100vh instead of 100% to take the full viewport height */
+    max-height: 100vh; /* Restrict maximum height to the viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +68,7 @@
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.9);
     color: #ffffff;
-    overflow-y: auto;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .projectContent {
@@ -75,6 +80,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    overflow: auto; /* Allow scrolling within the content if it becomes too long */
 }
 
 .projectImage {
@@ -84,6 +90,7 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
 
 .tags {
     margin-top: 15px;
@@ -110,7 +117,7 @@
     align-items: center;
     cursor: pointer;
     transition: color 0.3s;
-    margin-bottom: 0px;
+    margin-bottom: 20px; /* Added bottom margin for spacing */
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -123,3 +130,32 @@
     margin-right: 6px;
 }
 
+.checky {
+    margin: 20px auto; /* Center the tag bar on larger screens */
+    width: 90%; /* Make it responsive */
+    max-width: 500px; /* Limit width for larger screens */
+}
+
+@media (max-width: 600px) {
+    .checky {
+        margin: 10px; /* Reduced margin on smaller screens */
+        width: 80%; /* Make it take more space on mobile */
+    }
+
+    .projectDetails {
+        padding: 10px; /* Reduce padding to give more space for content */
+    }
+
+    .projectContent {
+        max-width: 90%; /* Make the project content take up more space */
+    }
+
+    .projectImage {
+        max-width: 100%; /* Adjust image width to be more responsive */
+    }
+
+    .closeButton {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}

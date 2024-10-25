@@ -7,6 +7,7 @@
     border-radius: 10px;
     scrollbar-width: thin; /* Thinner scrollbar for Firefox */
     scrollbar-color: #888 #111; /* Scrollbar color for Firefox */
+    max-width: 100%;
 }
 
 /* Webkit scroll bar customization */
@@ -44,6 +45,7 @@
     padding: 15px; /* Reduced padding for compactness */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    max-width: 100%;
 }
 
 .specsList {
@@ -73,6 +75,8 @@
 .animation {
     text-align: center;
     margin-top: 0px; /* Further reduced margin above the animation */
+    align-self: center;
+    
 }
 
 /* Animation Text Styles */

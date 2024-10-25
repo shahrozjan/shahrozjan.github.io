@@ -1,9 +1,16 @@
 [
+  {
+    "name": "THIS SITE",
+    "description": "As part of my journey to learn ReactJS, I build this portfolio site. Materials-UI was also used in making it more responsive and user-friendly (like Tags filter on this page)",
+    "tags": ["Javascript", "ReactJS"],
+    "date": "October 2024",
+    "image":"react_logo.png"
+  },
     {
       "name": "TonDone Cross Platform Mobile App",
       "description": "As part of the TonDone project, I was responsible for developing a range of REST APIs with a MariaDB backend. These APIs were designed to handle a large user base, efficiently serving thousands of users across the mobile app. I played a key role in creating new features for the app, such as the 'Create New Work Order Page' and 'Quick Actions Page'. Both features were developed using XAML for the front end, while the backend was powered by the REST APIs I had built. This project also involved refactoring parts of the app for better performance and maintainability in Xamarin and MAUI.",
       "tags": ["C#", ".NET Core", "Xamarin", "MAUI", "XAML", "MVC"],
-      "date": "July 2023",
+      "date": "December 2023",
       "image":"tondone.png"
     },
     {
@@ -29,10 +36,18 @@
     },
     {
       "name": "Mass Device Registration and Data Generation",
-      "description": "This project involved automating the registration and data generation for a large number of devices. I developed a .NET Core application that could register up to 100,000 devices across multiple databases in a single day, a significant improvement over the previous manual process that took several months. Additionally, the application could generate vast amounts of device data in seconds, which was used for testing and simulation purposes. This project required deep knowledge of parallel and asynchronous programming in C#, as well as advanced SQL techniques to handle the large volume of data efficiently.",
+      "description": "I single-handedly delivered the project built on .NET Core which required knowledge of Parallel Programming as well as asynchronous programming along with SQL. I also developed an application that generates a large amount of device data in seconds. The data generated could readily be customized as per the specifications of the device.",
       "tags": ["C#", ".NET Core", "IoTHub", "SQL", "Automation"],
       "date": "December 2019",
       "image":"resideo_logo.jpg"
+    },
+    {
+      "name": "Forensic Suicidal Analysis of Depressed Individuals using LSTM and CNN",
+      "description": "This research paper dealt with extraction of unstructured data from the Twitter feed, which was subsequently cleaned and trained using CNN-LSTM Network to determine the suicidal tendency of the depressed individual.",
+      "tags": ["Python, Machine","Learning "],
+      "date": "January 2021",
+      "image":"CNNLSTM.png"
     }
+
   ]
   

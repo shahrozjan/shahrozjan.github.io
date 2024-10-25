@@ -1,0 +1,81 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrollbar on the entire page */
+}
+
+.aboutContainer {
+    height: 100vh; /* Full viewport height */
+    max-height: 100vh; /* Prevent container overflow */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    width: 100%; /* Prevent horizontal overflow */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+    border-radius: 10px;
+    box-sizing: border-box; /* Include padding and border in the height/width calculation */
+    scrollbar-width: thin; /* Thinner scrollbar for Firefox */
+    scrollbar-color: #888 #111; /* Scrollbar color for Firefox */
+}
+
+/* Webkit scroll bar customization */
+.aboutContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.aboutContainer::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.aboutContainer::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+    border: 2px solid #111; /* Adds spacing inside the scrollbar handle */
+}
+
+.closeButton {
+    background: transparent;
+    border: whitesmoke;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    color: #ffffff; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Align text with icon */
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.closeButton:hover {
+    color: #f16529; /* Hover effect color */
+}
+
+.closeButton svg {
+    margin-right: 6px; /* Space between the icon and text */
+}
+
+.aboutItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Prevent child elements from overflowing */
+    margin-top: 10px;
+}
+
+.aboutContent {
+    text-align: left;
+    flex: 1; /* Ensures content takes the available width */
+    color: whitesmoke;
+}
+
+.images {
+    display: inline-block;
+    margin-right: 10px; /* Add some space between images if needed */
+    vertical-align: middle; /* Align images in the middle if necessary */
+    text-align: center; /* Center the images inline */
+    max-width: 100%; /* Prevent images from overflowing */
+}

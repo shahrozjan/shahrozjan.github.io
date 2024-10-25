@@ -112,6 +112,7 @@
     cursor: pointer;
     transition: color 0.3s;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 .closeButton:hover {

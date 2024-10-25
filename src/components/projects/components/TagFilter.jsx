@@ -54,13 +54,22 @@ const TagFilter = ({ tags, selectedTags, onChange }) => {
             )}
             ChipProps={{
                 sx: {
-                    backgroundColor: "#f16529", // A contrasting background color
-                    color: "whitesmoke", // Text color
+                    backgroundColor: "#f16529", // Chip background color
+                    color: "whitesmoke", // Text color of chip
                     fontWeight: "bold",
                 },
             }}
             sx={{
-                width: 500,
+                width: {
+                    xs: '100%', // Take full width on smaller screens
+                    md: '500px' // Set a fixed width of 500px on medium and larger screens
+                },
+                maxWidth: '400px', // Ensure it doesn't exceed 500px width
+                margin: {
+                    xs: 'auto', // Set top/bottom margin to 10px and left/right margin to 20px for smaller screens
+                    md: '0 20px' // Set left/right margin to 20px for larger screens, no top margin
+                },
+                //maxWidth: "500px", // Ensure the input doesn't exceed 500px in width
                 "& .MuiInputLabel-root": {
                     color: "whitesmoke", // Label text color
                     "&.Mui-focused": {
@@ -84,6 +93,9 @@ const TagFilter = ({ tags, selectedTags, onChange }) => {
                         color: "whitesmoke", // Input text color
                     },
                 },
+                "& .MuiAutocomplete-endAdornment": {
+                    color: "whitesmoke", // Color for the dropdown arrow
+                },
             }}
             renderInput={(params) => (
                 <TextField
@@ -91,10 +103,10 @@ const TagFilter = ({ tags, selectedTags, onChange }) => {
                     label="Tags"
                     placeholder="Select Tags"
                     sx={{
+                        width: "100%", // Set width to be responsive
                         backgroundColor: "#333333",
                         borderRadius: 30,
-                        marginTop:4,
-                        marginLeft:2,
+                        marginTop: 4,
                         "& .MuiInputBase-input": {
                             color: "whitesmoke", // Input text color
                         },

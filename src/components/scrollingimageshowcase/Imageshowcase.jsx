@@ -4,6 +4,7 @@ import styles from './Imageshowcase.module.css';
 import Projects from '../projects/projects';
 import Stack from '../stack/stack';
 import Experience from '../experience/experience';
+import About from '../about/about';
 
 const ImageShowCase = () => {
     const [focusedSection, setFocusedSection] = useState(null);
@@ -16,19 +17,19 @@ const ImageShowCase = () => {
     const imagearray = [
         {
             'section name': 'Stack',
-            'url': require('../../images/stack.jpg'),
+            'url': require('../../images/yourBackgroundImage1.jpg'),
         },
         {
             'section name': 'Projects',
-            'url': require('../../images/projects.jpg'),
+            'url': require('../../images/yourBackgroundImage6.jpg'),
         },
         {
             'section name': 'Experience',
-            'url': require('../../images/services.jpg'),
+            'url': require('../../images/yourBackgroundImage4.jpg'),
         },
         {
             'section name': 'About Me',
-            'url': require('../../images/about.jpg'),
+            'url': require('../../images/yourBackgroundImage8.jpg'),
         },
     ];
 
@@ -129,6 +130,7 @@ const ImageShowCase = () => {
                         )}
                         {focusedSection === 'About Me' && (
                             <>
+                            <About exitfn={handlesectionexit}/>
                             </>
                         )}
                     </div>
