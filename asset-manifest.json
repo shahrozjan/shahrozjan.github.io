@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4096a179.css",
-    "main.js": "/static/js/main.9f890dac.js",
+    "main.css": "/static/css/main.82ab7430.css",
+    "main.js": "/static/js/main.850c7c73.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/yourBackgroundImage11.jpg": "/static/media/yourBackgroundImage11.33cd41d0e7b20860b1cb.jpg",
-    "static/media/about.jpg": "/static/media/about.87a372101f2834bf5756.jpg",
-    "static/media/services.jpg": "/static/media/services.31cae5a516f339e0c122.jpg",
-    "static/media/stack.jpg": "/static/media/stack.fbd6b74b719e38edeed9.jpg",
-    "static/media/moteki.png": "/static/media/moteki.c40d32d1c6bf6aed60f8.png",
+    "static/media/yourBackgroundImage6.jpg": "/static/media/yourBackgroundImage6.d6717df1a337f2d29330.jpg",
+    "static/media/yourBackgroundImage4.jpg": "/static/media/yourBackgroundImage4.3a2f05689779afd9b50d.jpg",
+    "static/media/yourBackgroundImage1.jpg": "/static/media/yourBackgroundImage1.05b7c4efdf3e312f9bcd.jpg",
+    "static/media/yourBackgroundImage8.jpg": "/static/media/yourBackgroundImage8.9b2ab081e60f9bf89dce.jpg",
     "static/media/python-logo.png": "/static/media/python-logo.4f5f52c67194dc46e313.png",
     "static/media/file-type-html.902x1024.png": "/static/media/file-type-html.902x1024.8b9a72bae94cbbdd1905.png",
     "static/media/c-sharp-logo.png": "/static/media/c-sharp-logo.456d41f630085700b5d8.png",
-    "static/media/projects.jpg": "/static/media/projects.7d2c0c13c0cdaf2d8d7a.jpg",
     "static/media/react.1024x911.png": "/static/media/react.1024x911.d33541a41b630d5b3a54.png",
+    "static/media/me.jpg": "/static/media/me.1ad25ecd9db2205617db.jpg",
+    "static/media/react_logo.png": "/static/media/react_logo.e07925991d185b64e245.png",
+    "static/media/CNNLSTM.png": "/static/media/CNNLSTM.730e7489069c06b11b0b.png",
     "static/media/net-logo.png": "/static/media/net-logo.502c87a45099d6c842d5.png",
     "static/media/bplus_trees.jpg": "/static/media/bplus_trees.6716beefd2af9d576e22.jpg",
     "static/media/javascript-js.1024x1024.png": "/static/media/javascript-js.1024x1024.66c9eab7b39dc7b94970.png",
@@ -22,12 +24,12 @@
     "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
     "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
-    "main.4096a179.css.map": "/static/css/main.4096a179.css.map",
-    "main.9f890dac.js.map": "/static/js/main.9f890dac.js.map",
+    "main.82ab7430.css.map": "/static/css/main.82ab7430.css.map",
+    "main.850c7c73.js.map": "/static/js/main.850c7c73.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4096a179.css",
-    "static/js/main.9f890dac.js"
+    "static/css/main.82ab7430.css",
+    "static/js/main.850c7c73.js"
   ]
 }
