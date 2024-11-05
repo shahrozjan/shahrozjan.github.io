@@ -4,7 +4,7 @@ import Projects from '../projects/projects';
 import Stack from '../stack/stack';
 import Experience from '../experience/experience';
 import About from '../about/about';
-import dragImage from './images/Dragger.png'; // Import your drag image
+import dragImage from './images/Dragger.png';
 
 const ImageShowCase = () => {
     const [focusedSection, setFocusedSection] = useState(null);
@@ -13,42 +13,45 @@ const ImageShowCase = () => {
     const [dataPrevPercentage, setDataPrevPercentage] = useState(0);
     const [dataPercentage, setDataPercentage] = useState(0);
     const [allowClick, setAllowClick] = useState(true);
-    const [showDragImage, setShowDragImage] = useState(true); // State to control the visibility of the drag image
+    const [showDragImage, setShowDragImage] = useState(true);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     const imagearray = [
         {
             'section name': 'Stack',
             'url': require('../../images/yourBackgroundImage1.jpg'),
+            'route': '/stack',
         },
         {
             'section name': 'Projects',
             'url': require('../../images/yourBackgroundImage10.jpg'),
+            'route': '/projects',
         },
         {
             'section name': 'Experience',
             'url': require('../../images/yourBackgroundImage4.jpg'),
+            'route': '/experience',
         },
         {
             'section name': 'About Me',
             'url': require('../../images/yourBackgroundImage8.jpg'),
+            'route': '/about',
         },
     ];
 
     const track = useRef();
     const focusedimage = useRef();
     const expandedsection = useRef();
+    const animationFrameId = useRef(null); // Define the animation frame ID reference
 
     useEffect(() => {
-        // Hide the drag image after 3 seconds
         const timer = setTimeout(() => {
             setShowDragImage(false);
         }, 3000);
 
-        // Hide the drag image on any click event
         const handleClick = () => setShowDragImage(false);
         window.addEventListener('click', handleClick);
 
-        // Cleanup event listener and timer on component unmount
         return () => {
             clearTimeout(timer);
             window.removeEventListener('click', handleClick);
@@ -59,33 +62,51 @@ const ImageShowCase = () => {
         if (focusedURL) return;
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         setDataMouseDownAt(clientX);
+        setIsTouchDevice(!!e.touches);
     };
 
     const handleMouseMove = (e) => {
-        if (focusedURL) return;
-        if (dataMouseDownAt === 0) return;
+        if (focusedURL || dataMouseDownAt === 0) return;
+
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const mouseDelta = parseFloat(dataMouseDownAt) - clientX;
         const maxDelta = window.innerWidth < 600 ? window.innerWidth * 2 : window.innerWidth;
-        const percentage = (mouseDelta / maxDelta) * -100,
-            nextPercentageUnconstrained = parseFloat(dataPrevPercentage) + percentage,
-            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+        const percentage = (mouseDelta / maxDelta) * -100;
+        const nextPercentageUnconstrained = parseFloat(dataPrevPercentage) + percentage;
+        const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
 
-        const images = [...document.querySelectorAll(`.${styles.image}`)];
+        if (isTouchDevice) {
+            // On touch devices, throttle the movement with requestAnimationFrame
+            if (animationFrameId.current) {
+                cancelAnimationFrame(animationFrameId.current);
+            }
 
-        images.forEach((image) => {
-            image.animate({
-                objectPosition: `${nextPercentage + 100}% 50%`,
+            animationFrameId.current = requestAnimationFrame(() => {
+                const images = [...document.querySelectorAll(`.${styles.image}`)];
+                images.forEach((image) => {
+                    image.style.objectPosition = `${nextPercentage + 100}% 50%`;
+                });
+                track.current.style.transform = `translate(${nextPercentage}%, -50%)`;
+                setDataPercentage(nextPercentage);
+            });
+        } else {
+            // For desktop, keep original mouse movement behavior
+            const images = [...document.querySelectorAll(`.${styles.image}`)];
+            images.forEach((image) => {
+                image.animate({
+                    objectPosition: `${nextPercentage + 100}% 50%`,
+                }, { duration: 1200, fill: "forwards" });
+            });
+
+            track.current.animate({
+                transform: `translate(${nextPercentage}%, -50%)`,
             }, { duration: 1200, fill: "forwards" });
-        });
 
-        setDataPercentage(nextPercentage);
-        track.current.animate({
-            transform: `translate(${nextPercentage}%, -50%)`,
-        }, { duration: 1200, fill: "forwards" });
+            setDataPercentage(nextPercentage);
+        }
     };
 
-    const handleMouseUp = (e) => {
+    const handleMouseUp = () => {
         if (focusedURL) return;
         setDataMouseDownAt(0);
         if (dataPrevPercentage !== dataPercentage) setAllowClick(false);
@@ -93,9 +114,13 @@ const ImageShowCase = () => {
         setDataPrevPercentage(dataPercentage ? dataPercentage : 0);
     };
 
-    const handlesectionclick = (url, name) => {
+    const handlesectionclick = (url, name, route) => {
         if (focusedURL) return;
         if (!allowClick) return;
+
+        // Update the URL without reloading the page or changing the route
+        window.history.pushState(null, '', route);
+
         setFocusedURL(url);
         setFocusedSection(name);
         expandedsection.current.style.opacity = `1`;
@@ -107,6 +132,7 @@ const ImageShowCase = () => {
     };
 
     const handlesectionexit = () => {
+        window.history.replaceState(null, '', '/');
         expandedsection.current.style.opacity = `0`;
         expandedsection.current.style.width = `0px`;
         expandedsection.current.style.height = `0px`;
@@ -119,16 +145,17 @@ const ImageShowCase = () => {
 
     return (
         <>
-            {showDragImage && (
-                <div className={styles.dragImageContainer}>
-                    <img src={dragImage} alt="Drag Image" className={styles.dragImage} />
-                </div>
-            )}
-            <div className={styles.parent} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}
-                onTouchStart={handleMouseDown} onTouchMove={handleMouseMove} onTouchEnd={handleMouseUp}>
+            <div className={styles.parent}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onTouchStart={handleMouseDown}
+                onTouchMove={handleMouseMove}
+                onTouchEnd={handleMouseUp}
+            >
                 <div className={`${styles.track}`} ref={track}>
                     {imagearray.map((item, index) => (
-                        <div className={styles.section} key={index} onClick={() => handlesectionclick(item.url, item['section name'])}>
+                        <div className={styles.section} key={index} onClick={() => handlesectionclick(item.url, item['section name'], item.route)}>
                             <img className={`${styles.image}`} src={item.url} draggable={false} alt='gallery images' />
                             <div className={styles.sectionname}>{item['section name']}</div>
                             <div className={styles.shadowbox}></div>
@@ -139,20 +166,16 @@ const ImageShowCase = () => {
                     <img className={styles.bgimg} src={focusedURL} ref={focusedimage} alt='Background Image' />
                     <div className={styles.expandedcontainer}>
                         {focusedSection === 'Stack' && (
-                            <Stack exitfn={handlesectionexit}/>
+                            <Stack exitfn={handlesectionexit} />
                         )}
                         {focusedSection === 'Experience' && (
-                            <>
-                                <Experience exitfn={handlesectionexit}/>
-                            </>
+                            <Experience exitfn={handlesectionexit} />
                         )}
                         {focusedSection === 'Projects' && (
-                            <Projects exitfn={handlesectionexit}/>
+                            <Projects exitfn={handlesectionexit} />
                         )}
                         {focusedSection === 'About Me' && (
-                            <>
-                                <About exitfn={handlesectionexit}/>
-                            </>
+                            <About exitfn={handlesectionexit} />
                         )}
                     </div>
                 </div>

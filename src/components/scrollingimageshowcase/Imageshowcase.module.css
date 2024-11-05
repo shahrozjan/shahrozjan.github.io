@@ -111,15 +111,10 @@
     left: 0;
 }
 
-.dragImageContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10; /* Ensures the image appears above everything else */
-}
 
-.dragImage {
-    width: 100%; /* Adjust the size as needed */
-    height: auto;
-}
+
+
+
+
+
+

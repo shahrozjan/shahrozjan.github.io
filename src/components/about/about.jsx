@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
-import styles from './about.module.css'; // Use lowercase for the CSS import
+import styles from './about.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import UISwitch from "./switch";
 import Box from '@mui/material/Box';
 import me from './me.jpg';
+import useBackButtonHandler from '../hooks/useBackButtonHandler'; 
 
 export default function About(props) {
+  useBackButtonHandler(props.exitfn);
   const [lang, setLang] = React.useState("Eng");
 
   // Handler to switch between "Eng" and "Kmr"

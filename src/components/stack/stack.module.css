@@ -1,6 +1,6 @@
 /* Main Container for Stack Component */
 .stackContainer {
-    height: 100vh; /* Set the container height to fill the viewport */
+    max-height: 100vh; /* Set the container height to fill the viewport */
     overflow-y: auto; /* Enable vertical scrolling for the whole container */
     padding: 0px 30px; /* Adjusted padding to reduce unnecessary space */
     background: rgba(0, 0, 0, 0.7); /* Dark translucent background */

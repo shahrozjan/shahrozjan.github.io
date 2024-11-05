@@ -2,14 +2,17 @@ import React from 'react';
 import StackAnimation from './stack-animation.jsx'; // Import your animation component
 import styles from './stack.module.css'; // Use lowercase for the CSS import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import useBackButtonHandler from '../hooks/useBackButtonHandler'; // Import the custom hook
 
 export default function Stack(props) {
+    // Use the custom hook to handle the browser back button event
+    useBackButtonHandler(props.exitfn);
+
     return (
-        
         <div className={styles.stackContainer}>
             <button className={styles.closeButton} onClick={props.exitfn}>
-            <FontAwesomeIcon icon={faChevronLeft} /> Back
+                <FontAwesomeIcon icon={faChevronLeft} /> Back
             </button>
             {/* Technical Specifications Section */}
             <div className={styles.specs}>

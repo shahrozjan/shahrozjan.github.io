@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import projectsData from "./projectsData.json";
 import TagFilter from './components/TagFilter'; // Import the TagFilter component
+import useBackButtonHandler from '../hooks/useBackButtonHandler';
 
 const Projects = (props) => {
+    useBackButtonHandler(props.exitfn);
     const [selectedTags, setSelectedTags] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState(projectsData);
     const [selectedProject, setSelectedProject] = useState(null);

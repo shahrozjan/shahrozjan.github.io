@@ -1,15 +1,37 @@
 import React from 'react';
-import styles from './experience.module.css'; // Use lowercase for the CSS import
-import tonDoneLogo from '../../images/logos/tondone.png'; // Import the company logos
+import styles from './experience.module.css'; 
+import tonDoneLogo from '../../images/logos/tondone.png'; 
 import honeywellLogo from '../../images/logos/resideo.png';
+import beawareLogo from '../../images/logos/beaware.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import useBackButtonHandler from '../hooks/useBackButtonHandler'; 
+
 export default function Experience(props) {
+    useBackButtonHandler(props.exitfn);
+
     return (
+        <div className={styles.experienceOverlay}>
         <div className={styles.experienceContainer}>
             <button className={styles.closeButton} onClick={props.exitfn}>
             <FontAwesomeIcon icon={faChevronLeft} /> Back
             </button>
+            <div className={styles.experienceItem}>
+                <img src={beawareLogo} alt="BeAware" className={styles.companyLogo} />
+                <div className={styles.experienceContent}>
+                    <h3 className={styles.companyName+" "+styles.beaware}>BeAware</h3>
+                    <p className={styles.companyIntro}>
+                    BeAware is committed to making events accessible for the deaf community. 
+                    Known for their award-winning Deaf Assistant app, they now bring inclusive live captioning to conferences with ConfCap, empowering everyone to participate fully.
+                    </p>
+                    <h4 className={styles.jobTitle+" "+styles.beaware}>Full Stack Developer <span className={styles.jobDates}>Sep 2024 – Present</span></h4>
+                    <ul className={styles.jobDescription}>
+                        <li>Developed a React.js website for BeAware's conference captioning service 
+                            that leverages AI for real-time translation, enhancing accessibility and engagement 
+                            for global audiences.</li>
+                    </ul>
+                </div>
+            </div>
             <div className={styles.experienceItem}>
                 <img src={tonDoneLogo} alt="TonDone" className={styles.companyLogo} />
                 <div className={styles.experienceContent}>
@@ -50,6 +72,7 @@ export default function Experience(props) {
                     </ul>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
