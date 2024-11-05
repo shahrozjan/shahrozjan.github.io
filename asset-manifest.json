@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d05001b2.css",
-    "main.js": "/static/js/main.e344dca5.js",
+    "main.css": "/static/css/main.a0a86916.css",
+    "main.js": "/static/js/main.c9b16b20.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/yourBackgroundImage10.jpg": "/static/media/yourBackgroundImage10.6f4591bf093908b6ca38.jpg",
     "static/media/yourBackgroundImage6.jpg": "/static/media/yourBackgroundImage6.d6717df1a337f2d29330.jpg",
@@ -25,12 +25,12 @@
     "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
     "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
-    "main.d05001b2.css.map": "/static/css/main.d05001b2.css.map",
-    "main.e344dca5.js.map": "/static/js/main.e344dca5.js.map",
+    "main.a0a86916.css.map": "/static/css/main.a0a86916.css.map",
+    "main.c9b16b20.js.map": "/static/js/main.c9b16b20.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d05001b2.css",
-    "static/js/main.e344dca5.js"
+    "static/css/main.a0a86916.css",
+    "static/js/main.c9b16b20.js"
   ]
 }
