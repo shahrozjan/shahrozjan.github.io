@@ -19,22 +19,22 @@ const ImageShowCase = () => {
     const imagearray = [
         {
             'section name': 'Stack',
-            'url': require('../../images/yourBackgroundImage1.jpg'),
+            'url': require('../../images/stack.jpg'),
             'route': '/stack',
         },
         {
             'section name': 'Projects',
-            'url': require('../../images/yourBackgroundImage10.jpg'),
+            'url': require('../../images/projects.jpg'),
             'route': '/projects',
         },
         {
             'section name': 'Experience',
-            'url': require('../../images/yourBackgroundImage4.jpg'),
+            'url': require('../../images/experience.jpg'),
             'route': '/experience',
         },
         {
             'section name': 'About Me',
-            'url': require('../../images/yourBackgroundImage8.jpg'),
+            'url': require('../../images/about.jpg'),
             'route': '/about',
         },
     ];
