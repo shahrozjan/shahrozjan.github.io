@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.a0a86916.css",
-    "main.js": "/static/js/main.c9b16b20.js",
+    "main.js": "/static/js/main.a393ef01.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
-    "static/media/yourBackgroundImage10.jpg": "/static/media/yourBackgroundImage10.6f4591bf093908b6ca38.jpg",
+    "static/media/projects.jpg": "/static/media/projects.6f4591bf093908b6ca38.jpg",
     "static/media/yourBackgroundImage6.jpg": "/static/media/yourBackgroundImage6.d6717df1a337f2d29330.jpg",
-    "static/media/yourBackgroundImage4.jpg": "/static/media/yourBackgroundImage4.3a2f05689779afd9b50d.jpg",
-    "static/media/yourBackgroundImage1.jpg": "/static/media/yourBackgroundImage1.05b7c4efdf3e312f9bcd.jpg",
-    "static/media/yourBackgroundImage8.jpg": "/static/media/yourBackgroundImage8.0f157bdef8e696216901.jpg",
+    "static/media/experience.jpg": "/static/media/experience.3a2f05689779afd9b50d.jpg",
+    "static/media/stack.jpg": "/static/media/stack.05b7c4efdf3e312f9bcd.jpg",
+    "static/media/about.jpg": "/static/media/about.0f157bdef8e696216901.jpg",
     "static/media/python-logo.png": "/static/media/python-logo.4f5f52c67194dc46e313.png",
     "static/media/file-type-html.902x1024.png": "/static/media/file-type-html.902x1024.8b9a72bae94cbbdd1905.png",
     "static/media/c-sharp-logo.png": "/static/media/c-sharp-logo.456d41f630085700b5d8.png",
@@ -26,11 +26,11 @@
     "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
     "main.a0a86916.css.map": "/static/css/main.a0a86916.css.map",
-    "main.c9b16b20.js.map": "/static/js/main.c9b16b20.js.map",
+    "main.a393ef01.js.map": "/static/js/main.a393ef01.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0a86916.css",
-    "static/js/main.c9b16b20.js"
+    "static/js/main.a393ef01.js"
   ]
 }
