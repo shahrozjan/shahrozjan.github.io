@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0a86916.css",
-    "main.js": "/static/js/main.dbbad079.js",
+    "main.css": "/static/css/main.4e967075.css",
+    "main.js": "/static/js/main.44aef63f.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/yourBackgroundImage6.jpg": "/static/media/yourBackgroundImage6.d6717df1a337f2d29330.jpg",
     "static/media/experience.jpg": "/static/media/experience.3a2f05689779afd9b50d.jpg",
@@ -10,6 +10,7 @@
     "static/media/about.jpg": "/static/media/about.0f157bdef8e696216901.jpg",
     "static/media/python-logo.png": "/static/media/python-logo.4f5f52c67194dc46e313.png",
     "static/media/file-type-html.902x1024.png": "/static/media/file-type-html.902x1024.8b9a72bae94cbbdd1905.png",
+    "static/media/honeywell.png": "/static/media/honeywell.fe2772aeaafe8743ad2f.png",
     "static/media/c-sharp-logo.png": "/static/media/c-sharp-logo.456d41f630085700b5d8.png",
     "static/media/react.1024x911.png": "/static/media/react.1024x911.d33541a41b630d5b3a54.png",
     "static/media/me.jpg": "/static/media/me.1ad25ecd9db2205617db.jpg",
@@ -25,12 +26,12 @@
     "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
     "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
-    "main.a0a86916.css.map": "/static/css/main.a0a86916.css.map",
-    "main.dbbad079.js.map": "/static/js/main.dbbad079.js.map",
+    "main.4e967075.css.map": "/static/css/main.4e967075.css.map",
+    "main.44aef63f.js.map": "/static/js/main.44aef63f.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0a86916.css",
-    "static/js/main.dbbad079.js"
+    "static/css/main.4e967075.css",
+    "static/js/main.44aef63f.js"
   ]
 }
