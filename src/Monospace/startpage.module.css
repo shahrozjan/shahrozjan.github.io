@@ -48,6 +48,8 @@ html {
   align-items: center;
   background: var(--background-color);
   color: var(--text-color);
+  scrollbar-width: none; /* Firefox hides scrollbar */
+  -ms-overflow-style: none; /* IE/Edge hides scrollbar */
 }
 
 body {
@@ -63,10 +65,7 @@ body {
   -ms-overflow-style: none; /* IE/Edge hides scrollbar */
 }
 
-body::-webkit-scrollbar {
-  width: 0; /* Hides the scrollbar by setting width to 0 */
-  height: 0; /* For horizontal scrollbar */
-}
+
 
 @media screen and (max-width: 480px) {
   :root {
@@ -462,4 +461,20 @@ label input {
 
 .debug-toggle-label {
   text-align: right;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari hides scrollbar */
+    width: 0;
+    height: 0;
+  }
+
+.otrmkdwn
+{
+    overflow: hidden;
+}
+
+.mkdwn
+{
+    overflow: auto;
 }
