@@ -73,7 +73,7 @@ const TagFilter = ({ tags, selectedTags, onChange }) => {
                 "& .MuiInputLabel-root": {
                     color: "whitesmoke", // Label text color
                     "&.Mui-focused": {
-                        color: "#F16529", // Label text color when focused
+                        color: "#0073b1", // Label text color when focused
                     },
                 },
                 "& .MuiOutlinedInput-root": {
@@ -83,11 +83,11 @@ const TagFilter = ({ tags, selectedTags, onChange }) => {
                     },
                     "&:hover fieldset": {
                         borderRadius: 30,
-                        borderColor: "#F16529", // Input field border color on hover
+                        borderColor: "#0073b1", // Input field border color on hover
                     },
                     "&.Mui-focused fieldset": {
                         borderRadius: 30,
-                        borderColor: "#F16529", // Input field border color when focused
+                        borderColor: "#0073b1", // Input field border color when focused
                     },
                     "& input": {
                         color: "whitesmoke", // Input text color

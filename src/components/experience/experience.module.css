@@ -3,18 +3,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
     overflow: hidden;
     z-index: 9999;
     padding-bottom: 20px;
+    overflow-x: hidden;
+    border-radius: 10px;
 }
 
 /* Main Container for Experience Component */
 .experienceContainer {
-    height: 100vh; /* Full viewport height */
     max-height: 100vh; /* Prevent container overflow */
     overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden;
     padding: 20px;
     background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
     border-radius: 10px;
@@ -133,7 +133,7 @@
 }
 
 .closeButton:hover {
-    color: #f16529; /* Hover effect color */
+    color: #0073b1; /* Hover effect color */
 }
 
 .closeButton svg {

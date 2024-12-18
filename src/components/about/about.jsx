@@ -5,7 +5,10 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import UISwitch from "./switch";
 import Box from '@mui/material/Box';
 import me from './me.jpg';
-import useBackButtonHandler from '../hooks/useBackButtonHandler'; 
+import useBackButtonHandler from '../hooks/useBackButtonHandler';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import SocialButtons from "./SocialButtons"; 
 
 export default function About(props) {
   useBackButtonHandler(props.exitfn);
@@ -55,7 +58,7 @@ export default function About(props) {
           />
           <h1>Hello!</h1>
           <h2>
-            I'm Shahroz Jan, a Senior Software Engineer with over 3 years of experience in software engineering, 
+            I'm Shahroz Jan, a Software Engineer with over 3 years of experience in software engineering, 
             ranging from backend API development to cloud automation and mobile app projects. 
             I graduated with a Master's degree in Computer Science from Rutgers University-New Brunswick with a 3.88 GPA in May 2024. 
             I thrive on creating solutions that serve thousands of users, and on learning new technologies with every project. 
@@ -63,6 +66,7 @@ export default function About(props) {
             I was also (almost) a semi-professional gamer and won a CSGO College National championship.
             By the way, I built this site using React and all the images were taken by me!
           </h2>
+            <SocialButtons/>
           <div className={styles.images}></div>
         </div>
       </div>

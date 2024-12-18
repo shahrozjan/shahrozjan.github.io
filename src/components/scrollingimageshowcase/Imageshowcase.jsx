@@ -5,6 +5,7 @@ import Stack from '../stack/stack';
 import Experience from '../experience/experience';
 import About from '../about/about';
 import dragImage from './images/Dragger.png';
+import Academics from '../academics/academics';
 
 const ImageShowCase = () => {
     const [focusedSection, setFocusedSection] = useState(null);
@@ -18,14 +19,9 @@ const ImageShowCase = () => {
 
     const imagearray = [
         {
-            'section name': 'Stack',
-            'url': require('../../images/stack.jpg'),
-            'route': '/stack',
-        },
-        {
-            'section name': 'Projects',
-            'url': require('../../images/projects.jpg'),
-            'route': '/projects',
+            'section name': 'About Me',
+            'url': require('../../images/about.jpg'),
+            'route': '/about',
         },
         {
             'section name': 'Experience',
@@ -33,10 +29,20 @@ const ImageShowCase = () => {
             'route': '/experience',
         },
         {
-            'section name': 'About Me',
-            'url': require('../../images/about.jpg'),
-            'route': '/about',
+            'section name': 'Projects',
+            'url': require('../../images/projects.jpg'),
+            'route': '/projects',
         },
+        {
+            'section name': 'Stack',
+            'url': require('../../images/stack.jpg'),
+            'route': '/stack',
+        },
+        {
+            'section name': 'Academics',
+            'url': require('../../images/academics.jpg'),
+            'route': '/academics',
+        }
     ];
 
     const track = useRef();
@@ -165,6 +171,9 @@ const ImageShowCase = () => {
                 <div className={styles.expandedsection} ref={expandedsection}>
                     <img className={styles.bgimg} src={focusedURL} ref={focusedimage} alt='Background Image' />
                     <div className={styles.expandedcontainer}>
+                    {focusedSection === 'Academics' && (
+                            <Academics exitfn={handlesectionexit} />
+                        )}
                         {focusedSection === 'Stack' && (
                             <Stack exitfn={handlesectionexit} />
                         )}

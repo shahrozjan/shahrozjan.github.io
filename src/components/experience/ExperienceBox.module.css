@@ -1,0 +1,147 @@
+.experienceOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    z-index: 9999;
+    padding-bottom: 20px;
+}
+
+/* Main Container for Experience Component */
+.experienceContainer {
+    height: 100vh; /* Full viewport height */
+    max-height: 100vh; /* Prevent container overflow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+    border-radius: 10px;
+    scrollbar-width: thin; /* Thinner scrollbar for Firefox */
+    scrollbar-color: #888 #111; /* Scrollbar color for Firefox */
+}
+
+/* Webkit scroll bar customization */
+.experienceContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.experienceContainer::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.experienceContainer::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+    border: 2px solid #111; /* Adds spacing inside the scrollbar handle */
+}
+
+/* Experience Item Styles */
+.experienceItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Prevent child elements from overflowing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experienceItem:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Company Logo Styles */
+.companyLogo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px; /* Rounded corners for logos */
+    object-fit: contain;
+}
+
+/* Experience Content Styles */
+.experienceContent {
+    text-align: left;
+    flex: 1; /* Ensures content takes the available width */
+}
+
+.companyName {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F16529;
+    margin: 0;
+}
+
+.companyIntro {
+    color: #ccc;
+    font-style: italic;
+    margin: 5px 0 10px;
+}
+
+.jobTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #F16529;
+}
+
+.jobDates {
+    font-weight: normal;
+    color: #888;
+    font-size: 16px;
+}
+
+.jobDescription {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.jobDescription li {
+    margin-bottom: 8px;
+}
+
+.tondone {
+    color: #3b7edc;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.honeywell {
+    color: #e54659be !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.beaware {
+    color: #285aa0 !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.closeButton {
+    background: transparent;
+    border: whitesmoke;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    color: #ffffff; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Align text with icon */
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.closeButton:hover {
+    color: #f16529; /* Hover effect color */
+}
+
+.closeButton svg {
+    margin-right: 6px; /* Space between the icon and text */
+}

@@ -1,5 +1,12 @@
 [
   {
+    "name": "Deck Detective",
+    "description": "Engineered a peer-to-peer, turn-based multiplayer web application using React, leveraging PeerJS and WebRTC  for seamless real-time communication. Implemented a lightweight signaling server on Render to facilitate initial peer discovery and connection, enabling a decentralized and scalable architecture. Hosted the static app on GitHub Pages, with all game logic executed locally on each peer, ensuring smooth game progression based on individual turns.",
+    "tags": ["Javascript", "ReactJS","WebRTC"],
+    "date": "December 2024",
+    "image":"react_logo.png"
+  },
+  {
     "name": "THIS SITE",
     "description": "As part of my journey to learn ReactJS, I build this portfolio site. Materials-UI was also used in making it more responsive and user-friendly (like Tags filter on this page)",
     "tags": ["Javascript", "ReactJS"],

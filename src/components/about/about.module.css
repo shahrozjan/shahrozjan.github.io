@@ -48,7 +48,7 @@ body {
 }
 
 .closeButton:hover {
-    color: #f16529; /* Hover effect color */
+    color: #0073b1; /* Hover effect color */
 }
 
 .closeButton svg {
@@ -79,3 +79,51 @@ body {
     text-align: center; /* Center the images inline */
     max-width: 100%; /* Prevent images from overflowing */
 }
+
+.centeredButtons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Aligns them vertically (optional) */
+    margin: 20px 0; /* Adds spacing above and below the buttons */
+}
+
+.aboutButton {
+    color: #555; /* Default icon color */
+    border: 2px solid; /* Default border */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.aboutButton:hover {
+    color: #0073b1; /* LinkedIn blue on hover */
+    border-color: #0073b1; /* Highlight border on hover */
+    background-color: rgba(0, 115, 177, 0.1); /* Optional: Light hover background */
+}
+
+.aboutButton:hover svg {
+    color: #0073b1; /* Target inner SVG icon color */
+}
+
+.aboutButton.github:hover {
+    color: #333; /* GitHub hover color (black/gray) */
+    border-color: #333;
+}
+
+.aboutButton.github:hover svg {
+    color: #333; /* Target GitHub icon specifically */
+}
+
+.aboutButton.email:hover {
+    color: #e53935; /* Red for email button */
+    border-color: #e53935;
+}
+
+.aboutButton.email:hover svg {
+    color: #e53935; /* Target email icon color */
+}
+
+
+button:hover {
+    border-color: inherit
+  }
+
+
