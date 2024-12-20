@@ -1,0 +1,98 @@
+.centeredButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Increase space between buttons */
+    margin: var(--line-height) 0;
+    padding-bottom: 20px;
+}
+
+.aboutButton {
+    font-family: var(--font-family);
+    font-size: 1rem; /* Adjust text size */
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: var(--border-thickness) solid var(--text-color);
+    padding: 1rem; /* Uniform padding to increase button size */
+    width: 4rem; /* Fixed width for square buttons */
+    height: 4rem; /* Fixed height for square buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.aboutButton:hover {
+    background-color: var(--background-color-alt);
+    /* color: var(--text-color-alt); */
+    /* border-color: var(--text-color-alt); */
+}
+
+.aboutButton svg {
+    font-size: 2rem; 
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+/* .aboutButton:hover svg { */
+    /* color: var(--text-color-alt); */
+/* } */
+
+/* Snackbar Container */
+.snackbar-theme .MuiSnackbarContent-root {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-color); /* Themed text color */
+    background-color: var(--background-color-alt); /* Alternate background */
+    border: var(--border-thickness) solid var(--text-color); /* Add border */
+    box-shadow: none; /* Remove default shadow */
+    padding: var(--line-height);
+    letter-spacing: 0.05ch; /* Mono-style spacing */
+    text-transform: uppercase; /* Optional for style consistency */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Spacing between icon and text */
+}
+
+.snackbar-theme .MuiSnackbarContent-root {
+    font-family: var(--font-family); /* JetBrains Mono */
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    background: transparent; /* Transparent background */
+    color: var(--text-color); /* White text color */
+    border: var(--border-thickness) solid var(--text-color); /* White border */
+    box-shadow: none; /* Remove shadow */
+    text-transform: uppercase; /* Mono-style uppercase text */
+    letter-spacing: 0.05ch;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: calc(var(--line-height) / 2) 1rem;
+}
+
+.snackbar-theme .MuiAlert-icon {
+    font-size: 1.2rem; /* Adjust icon size */
+    color: var(--text-color); /* White icon */
+}
+
+.snackbar-theme .MuiSnackbarContent-message {
+    color: var(--text-color); /* Force text color */
+    margin: 0;
+}
+
+.snackbar-theme .MuiSnackbarContent-action button {
+    color: var(--text-color); /* Close button color */
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.snackbar-theme .MuiSnackbarContent-action button:hover {
+    color: var(--text-color-alt);
+}
+
+

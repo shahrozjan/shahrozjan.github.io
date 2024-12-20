@@ -1,0 +1,54 @@
+/* Light Switch Container */
+.lightSwitchContainer {
+    position: fixed;
+    top: -170px;
+    right: 35%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* SVG Styling */
+  .lightSwitchSVG {
+    width: 50px;
+    height: 300px;
+    color: var(--text-color); /* Inherit from theme */
+    transition: color 0.3s ease;
+  }
+  
+  /* Dark Mode */
+  body.darkMode .lightSwitchSVG {
+    color: var(--background-color); /* Adjust wire and switch color */
+  }
+  
+  @media (max-width: 1100px) {
+    .lightSwitchContainer {
+      right: 100px
+    }
+  }
+
+  @media (max-width: 700px) {
+    .lightSwitchContainer {
+      right: 20px
+    }
+  }
+
+  /* Light Switch Animation */
+@keyframes switchClick {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  50% {
+    transform: translateY(30px); /* Move down by 10px */
+  }
+  100% {
+    transform: translateY(0); /* Back to initial position */
+  }
+}
+
+/* Apply animation on click */
+.clicked {
+  animation: switchClick 1s ease-in-out; /* Smooth animation */
+}

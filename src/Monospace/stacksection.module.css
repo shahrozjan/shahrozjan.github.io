@@ -1,0 +1,76 @@
+.stackLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 12rem; /* Adjust for largest logo */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .logo {
+    font-family: var(--font-family);
+    font-size: 1.2rem; /* Adjust font size as needed */
+    color: var(--text-color);
+    line-height: 1.5;
+    white-space: pre; /* Preserve spacing for ASCII art */
+  }
+  
+  .logoContainer {
+    animation: slideInOut 4s infinite; /* Slower animation (6 seconds) */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Prevent overflow visibility */
+    margin-bottom: 30px;
+  }
+  
+  @keyframes slideInOut {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Start fully off-screen to the left */
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(0); /* Smoothly slide into view */
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(0); /* Stay in view */
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%); /* Slide out completely to the right */
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .logo {
+      font-size: 0.8rem; /* Reduce font size for ASCII art */
+      line-height: 1.2; /* Adjust line height for better spacing */
+    }
+  }
+  
+
+  @media (max-width: 500px) {
+    .stackLogo {
+      min-height: 7rem; /* Reduce container height for smaller screens */
+    }
+  
+    .logoContainer {
+      animation: slideInOut 4s infinite;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .logo {
+      font-size: 0.5rem; /* Reduce font size for ASCII art */
+      line-height: 1.2; /* Adjust line height for better spacing */
+    }
+  }
+  
+  
