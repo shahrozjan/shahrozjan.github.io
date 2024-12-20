@@ -15,3 +15,5 @@ Here you can list your academic qualifications, achievements, and more.
   - Year: 2015-2019
   - GPA: 8.41
   - Location: Bengaluru, KR, India
+
+  ---

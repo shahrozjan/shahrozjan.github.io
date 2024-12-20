@@ -10,5 +10,6 @@ and on learning new technologies with every project. On the
 personal side, my hobbies include hiking, going to rock
  concerts, and playing video games. I was also (almost) a
 semi-professional gamer and won a CSGO College National
-championship. By the way, I built this site using React and
-all the images were taken by me!
+championship. By the way, I built this site using ReactJS in
+monospace theme.
+
