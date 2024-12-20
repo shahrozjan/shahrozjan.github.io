@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.57a39b4c.css",
+    "main.css": "/static/css/main.d5645826.css",
     "main.js": "/static/js/main.e072a2f8.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/yourBackgroundImage6.jpg": "/static/media/yourBackgroundImage6.d6717df1a337f2d29330.jpg",
@@ -29,12 +29,12 @@
     "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
     "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
-    "main.57a39b4c.css.map": "/static/css/main.57a39b4c.css.map",
+    "main.d5645826.css.map": "/static/css/main.d5645826.css.map",
     "main.e072a2f8.js.map": "/static/js/main.e072a2f8.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57a39b4c.css",
+    "static/css/main.d5645826.css",
     "static/js/main.e072a2f8.js"
   ]
 }
