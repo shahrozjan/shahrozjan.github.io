@@ -15,6 +15,8 @@ function StartPage() {
   const contentRef = useRef(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const touchStart = useRef(0); // To track touch start position
+  const velocity = useRef(0); // To track touch velocity
+  const isScrolling = useRef(false); // To track scrolling momentum
 
   const toggleDarkMode = () => {
     startRain();
@@ -73,25 +75,42 @@ function StartPage() {
 
     const handleTouchStart = (event) => {
       touchStart.current = event.touches[0].clientY; // Record the initial touch position
+      velocity.current = 0; // Reset velocity
     };
 
     const handleTouchMove = (event) => {
       if (contentRef.current) {
-        const touchDelta = touchStart.current - event.touches[0].clientY; // Calculate movement
+        const currentTouchY = event.touches[0].clientY;
+        const touchDelta = touchStart.current - currentTouchY; // Calculate movement
+        velocity.current = touchDelta; // Update velocity
         contentRef.current.scrollTop += touchDelta; // Update scroll position
-        touchStart.current = event.touches[0].clientY; // Update for the next move
+        touchStart.current = currentTouchY; // Update for the next move
         event.preventDefault();
       }
+    };
+
+    const handleTouchEnd = () => {
+      // Apply momentum scrolling
+      const applyMomentum = () => {
+        if (contentRef.current && Math.abs(velocity.current) > 0.1) {
+          contentRef.current.scrollTop += velocity.current; // Continue scrolling
+          velocity.current *= 0.95; // Deceleration factor
+          requestAnimationFrame(applyMomentum); // Continue momentum
+        }
+      };
+      applyMomentum();
     };
 
     window.addEventListener("wheel", handleScroll, { passive: false });
     window.addEventListener("touchstart", handleTouchStart, { passive: false });
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
