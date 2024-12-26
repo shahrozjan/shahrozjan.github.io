@@ -26,7 +26,7 @@ function ProjectSection() {
   // Extract unique tags from all projects
   const allTags = Array.from(
     new Set(projectsData.flatMap((project) => project.tags))
-  );
+  ).sort((a, b) => a.replace(/^\./, "").localeCompare(b.replace(/^\./, "")));  
 
   // Filter projects based on selected tags
   const filteredProjects = selectedTags.length
