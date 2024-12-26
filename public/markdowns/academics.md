@@ -1,7 +1,5 @@
 # Academics
 
-Here you can list your academic qualifications, achievements, and more.
-
 ## Degrees
 - Master of Science in Computer Science
   - Institution: Rutger's University
