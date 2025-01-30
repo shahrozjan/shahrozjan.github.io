@@ -1,4 +1,20 @@
 [
+      {
+        "CompanyName": "Baruch College CUNY",
+        "imageURL":"baruch",
+        "Description": "Baruch College, part of the CUNY system, is a leading institution in business, public affairs, and liberal arts, offering students real-world opportunities in the heart of Manhattan.",
+        "Positions": [
+          {
+            "JobTitle": "Software Developer",
+            "Span": "Dec 2024 – Ongoing",
+            "Work": [
+              "Developing the college’s study abroad portal using .NET Core and React TypeScript with Tailwind CSS.",
+              "Designed the database and configured the LDAP authorization in the backend for security.",
+              "Implemented JWT Hydration with HTTPonly cookies for front end role based authentication"
+            ]
+          }
+        ]
+      },
     
     {
                 "CompanyName": "TonDone",
@@ -6,7 +22,7 @@
                 "Description": "TonDone is the business operating system for building and facility service companies, serving hundreds of clients.",
                 "Positions": [
                     {
-                        "JobTitle": "Software Engineer",
+                        "JobTitle": "Software Developer",
                         "Span": "Jun 2024 - Dec 2024",
                         "Work": [
                         "Migrated the Xamarin-based TonDone app to MAUI.",
@@ -14,7 +30,7 @@
                         ]
                     },
                     {
-                        "JobTitle": "Software Engineer Intern",
+                        "JobTitle": "Software Developer Intern",
                         "Span": "May 2023 - May 2024",
                         "Work": [
                         "Integrated Swagger for the backend web APIs and created API connections for the cross-platform mobile application.",
