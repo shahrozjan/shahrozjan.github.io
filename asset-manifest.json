@@ -1,40 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5645826.css",
-    "main.js": "/static/js/main.0f932560.js",
+    "main.css": "/static/css/main.ffa1a008.css",
+    "main.js": "/static/js/main.34b79cc1.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
-    "static/media/yourBackgroundImage6.jpg": "/static/media/yourBackgroundImage6.d6717df1a337f2d29330.jpg",
-    "static/media/experience.jpg": "/static/media/experience.3a2f05689779afd9b50d.jpg",
-    "static/media/stack.jpg": "/static/media/stack.05b7c4efdf3e312f9bcd.jpg",
-    "static/media/projects.jpg": "/static/media/projects.23625be9f614abc38971.jpg",
-    "static/media/about.jpg": "/static/media/about.0f157bdef8e696216901.jpg",
-    "static/media/python-logo.png": "/static/media/python-logo.4f5f52c67194dc46e313.png",
-    "static/media/file-type-html.902x1024.png": "/static/media/file-type-html.902x1024.8b9a72bae94cbbdd1905.png",
-    "static/media/honeywell.png": "/static/media/honeywell.fe2772aeaafe8743ad2f.png",
-    "static/media/academics.jpg": "/static/media/academics.a28c34512cd6d15bd1b2.jpg",
-    "static/media/c-sharp-logo.png": "/static/media/c-sharp-logo.456d41f630085700b5d8.png",
-    "static/media/react.1024x911.png": "/static/media/react.1024x911.d33541a41b630d5b3a54.png",
-    "static/media/ramaiah.png": "/static/media/ramaiah.10a21fd3746c226633ca.png",
-    "static/media/me.jpg": "/static/media/me.1ad25ecd9db2205617db.jpg",
-    "static/media/react_logo.png": "/static/media/react_logo.e07925991d185b64e245.png",
-    "static/media/CNNLSTM.png": "/static/media/CNNLSTM.730e7489069c06b11b0b.png",
-    "static/media/rutgers.png": "/static/media/rutgers.4a15db242754daf97e78.png",
-    "static/media/net-logo.png": "/static/media/net-logo.502c87a45099d6c842d5.png",
-    "static/media/bplus_trees.jpg": "/static/media/bplus_trees.6716beefd2af9d576e22.jpg",
-    "static/media/javascript-js.1024x1024.png": "/static/media/javascript-js.1024x1024.66c9eab7b39dc7b94970.png",
-    "static/media/tondone.png": "/static/media/tondone.135ae18ac9ce66971f19.png",
-    "static/media/Dragger.png": "/static/media/Dragger.702c9402757fad22bc9b.png",
-    "static/media/english.svg": "/static/media/english.2aed9033ca7a80bae407f3a5ee3b12a6.svg",
-    "static/media/resideo.png": "/static/media/resideo.5b2496b3c914ff211129.png",
-    "static/media/resideo_logo.jpg": "/static/media/resideo_logo.283d5af859dd242b5304.jpg",
-    "static/media/kashmiri.svg": "/static/media/kashmiri.04b95cff63b481a8e369d7823dfe09c0.svg",
     "index.html": "/index.html",
-    "main.d5645826.css.map": "/static/css/main.d5645826.css.map",
-    "main.0f932560.js.map": "/static/js/main.0f932560.js.map",
+    "main.ffa1a008.css.map": "/static/css/main.ffa1a008.css.map",
+    "main.34b79cc1.js.map": "/static/js/main.34b79cc1.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5645826.css",
-    "static/js/main.0f932560.js"
+    "static/css/main.ffa1a008.css",
+    "static/js/main.34b79cc1.js"
   ]
 }
