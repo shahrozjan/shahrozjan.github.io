@@ -1,14 +1,6 @@
 # ABOUT ME
 
-I'm Shahroz Jan, a Software Engineer with over 3 years of
-experience, ranging from backend API development to cloud 
-automation and mobile app projects. I graduated with a 
-Master's degree in Computer Science from Rutgers University-New Brunswick 
-with a 3.88 GPA in May 2024. I thrive on creating scalable solutions 
-and on learning new technologies with every project. On the
-personal side, my hobbies include hiking, going to rock
- concerts, and playing video games. I was also (almost) a
-semi-professional gamer and won a CSGO College National
-championship. This website has been build in React 
-with a monospace theme, you can read in depth about it [here](https://owickstrom.github.io/the-monospace-web/) 
+I'm Shahroz Jan, a Software Engineer with over three years of experience in full stack development, cloud automation, and mobile applications. I earned my Master’s in Computer Science from Rutgers University-New Brunswick, graduating with a 3.88 GPA in May 2024. Passionate about crafting scalable, high-performance solutions, I thrive on learning new technologies and tackling complex challenges.
+
+Outside of work, I enjoy hiking, small rock concerts, and gaming. I was also close to becoming a semi-professional esports player and even won the ESL CSGO College National Championship. Oh, and don’t forget to click the light switch above.
 

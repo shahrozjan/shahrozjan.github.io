@@ -1,0 +1,67 @@
+/* terminalchat.module.css */
+
+/* Container styles for dark mode (terminal look) */
+.terminalChatContainerDark {
+    position: relative; /* Create a stacking context */
+    z-index: 0;         /* Ensure it stays below fixed elements with higher z-index */
+    background-color: var(--background-color); /* Should be #000 in dark mode */
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 1rem;
+    /* Removed border-radius for square corners */
+    transition: background-color 2s ease-out, color 2s ease-out;
+  }
+  
+  /* Container styles for light mode */
+  .terminalChatContainerLight {
+    position: relative; /* Create a stacking context */
+    z-index: 0;         /* Ensure it stays below fixed elements with higher z-index */
+    background-color: var(--background-color); /* Should be set for light mode */
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 1rem;
+    /* Removed border-radius for square corners */
+    transition: background-color 2s ease-out, color 2s ease-out;
+  }
+  
+  /* General message styling */
+  .terminalChatMessage {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* In dark mode, user messages are green */
+  .terminalChatContainerDark .userMessage {
+    color: green;
+  }
+  
+  /* In light mode, user messages are cyan */
+  .terminalChatContainerLight .userMessage {
+    color: #0ff;
+  }
+  
+  /* Styling for response messages (inherits container's text color) */
+  .responseMessage {
+    /* Inherit color, or add extra styling if needed */
+  }
+  
+  /* Input area wrapper */
+  .terminalChatInputWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Prompt symbol styling */
+  .prompt {
+    margin-right: 0.5rem;
+  }
+  
+  /* Input field styling */
+  .terminalChatInput {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 90%;
+    font-family: var(--font-family);
+    color: inherit;
+  }
+  

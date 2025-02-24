@@ -10,7 +10,7 @@
             "Work": [
               "Developing the college’s study abroad portal using .NET Core and React TypeScript with Tailwind CSS.",
               "Designed the database and configured the LDAP authorization in the backend for security.",
-              "Implemented JWT Hydration with HTTPonly cookies for front end role based authentication"
+              "Implemented JWT Hydration with HTTPonly cookies and front end role based authentication"
             ]
           }
         ]

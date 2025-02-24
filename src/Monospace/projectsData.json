@@ -1,15 +1,30 @@
 [
   {
+    "name": "AI Portfolio Assistant",
+    "description": "Developed a cost-effective ChatGPT wrapper featuring customized prompts, enabling seamless integration into portfolio websites as an AI chatbot that intelligently responds to inquiries about your professional profile.",
+    "tags": ["React", "JavaScript", "OpenAI API", "Prompt Engineering"],
+    "date": "February 2025",
+    "image":"chatgpt-icon.png"
+  },
+
+  {
+    "name": "Atomify.in",
+    "description": "Volunteering to develop a digital marketing website using Next.js with a focus on enhancing SEO.",
+    "tags": ["TypeScript", "NextJS"],
+    "date": "January 2025",
+    "image":"Atomify-logo.png"
+  },
+  {
     "name": "Deck Detective",
     "description": "Engineered a peer-to-peer, turn-based multiplayer web application using React, leveraging PeerJS and WebRTC  for seamless real-time communication. Implemented a lightweight signaling server on Render to facilitate initial peer discovery and connection, enabling a decentralized and scalable architecture. Hosted the static app on GitHub Pages, with all game logic executed locally on each peer, ensuring smooth game progression based on individual turns.",
-    "tags": ["Javascript", "ReactJS","WebRTC"],
+    "tags": ["Javascript", "React","WebRTC"],
     "date": "December 2024",
     "image":"react_logo.png"
   },
   {
     "name": "THIS SITE",
     "description": "As part of my journey to learn ReactJS, I build this portfolio site. Materials-UI was also used in making it more responsive and user-friendly (like Tags filter on this page)",
-    "tags": ["Javascript", "ReactJS"],
+    "tags": ["Javascript", "React"],
     "date": "October 2024",
     "image":"react_logo.png"
   },

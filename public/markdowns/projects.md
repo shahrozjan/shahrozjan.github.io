@@ -1,12 +1,22 @@
 # Project Portfolio
 
+## Atomify.in
+
+**Description:**
+Volunteering to develop a digital marketing website using Next.js with a focus on enhancing SEO.
+
+**Tags:** TypeScript, NextJS
+**Date:** November 2024
+
+---
+
 ## Deck Detective
 
 **Description:**
 Engineered a peer-to-peer, turn-based multiplayer web application using React, leveraging PeerJS and WebRTC for seamless real-time communication. Implemented a lightweight signaling server on Render to facilitate initial peer discovery and connection, enabling a decentralized and scalable architecture. Hosted the static app on GitHub Pages, with all game logic executed locally on each peer, ensuring smooth game progression based on individual turns.
 
 **Tags:** Javascript, ReactJS, WebRTC  
-**Date:** December 2024
+**Date:** November 2024
 
 ---
 
